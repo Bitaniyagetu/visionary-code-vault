@@ -14,13 +14,39 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
     
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+    try {
+      const res = await fetch("http://localhost:3001/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          subject: formData.get("subject"),
+          message: formData.get("message")
+        })
+      });
+    
+      if (!res.ok) throw new Error("Failed to send");
+    
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon.",
+      });
+    
+      form.reset();
+    } catch (err) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    }
+    
     
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
@@ -72,6 +98,7 @@ const Contact = () => {
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Name</label>
                     <Input 
+                      name="name"
                       required 
                       placeholder="Your name"
                       className="bg-background/50 border-border/50 focus:border-primary"
@@ -80,6 +107,7 @@ const Contact = () => {
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Email</label>
                     <Input 
+                      name="email"
                       type="email" 
                       required 
                       placeholder="your.email@example.com"
@@ -91,6 +119,7 @@ const Contact = () => {
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Subject</label>
                   <Input 
+                    name="subject"
                     required 
                     placeholder="What's this about?"
                     className="bg-background/50 border-border/50 focus:border-primary"
@@ -100,6 +129,7 @@ const Contact = () => {
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Message</label>
                   <Textarea 
+                    name="message"
                     required 
                     placeholder="Tell me about your project or just say hello!"
                     className="min-h-32 bg-background/50 border-border/50 focus:border-primary resize-none"
