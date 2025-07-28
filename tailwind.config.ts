@@ -75,6 +75,7 @@ export default {
 				'glow-accent': 'var(--glow-accent)'
 			},
 			fontFamily: {
+				'pixel': ['Press Start 2P', 'monospace'],
 				'mono': ['JetBrains Mono', 'Fira Code', 'monospace']
 			},
 			borderRadius: {
