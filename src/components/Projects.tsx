@@ -6,6 +6,22 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Time Tails",
+      description: "iOS app using Pomodoro technique to guide study sessions and track study times. Built with Swift and Xcode for enhanced productivity.",
+      technologies: ["Swift", "Xcode", "iOS", "Core Data", "Timer Management"],
+      image: "photo-1494256997604-768d1f608cac",
+      github: "https://github.com/Bitaniyagetu",
+      demo: "#"
+    },
+    {
+      title: "Feru Bar & Restaurant Website",
+      description: "Complete restaurant website with modern design, interactive features, and responsive layout built with vanilla web technologies.",
+      technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
+      image: "photo-1517248135467-4c7edcad34c4",
+      github: "https://github.com/Bitaniyagetu",
+      demo: "#"
+    },
+    {
       title: "Real-Time Weather App",
       description: "Java-based application that integrates weather APIs to fetch real-time data for 100,000+ cities, reducing response time by 40% through optimized API calls.",
       technologies: ["Java", "API Integration", "OOP Design"],
@@ -26,14 +42,6 @@ const Projects = () => {
       description: "Interactive Python games featuring logic-driven gameplay, user input validation, and state management for scalability and ease of modification.",
       technologies: ["Python", "Game Logic", "State Management"],
       image: "photo-1493711662062-fa541adb3fc8",
-      github: "https://github.com/Bitaniyagetu",
-      demo: "#"
-    },
-    {
-      title: "Feru Bar & Restaurant Website",
-      description: "Complete restaurant website with modern design, interactive features, and responsive layout built with vanilla web technologies.",
-      technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
-      image: "photo-1517248135467-4c7edcad34c4",
       github: "https://github.com/Bitaniyagetu",
       demo: "#"
     }
