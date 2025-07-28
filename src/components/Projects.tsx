@@ -36,6 +36,14 @@ const Projects = () => {
       image: "photo-1517248135467-4c7edcad34c4",
       github: "https://github.com/Bitaniyagetu",
       demo: "#"
+    },
+    {
+      title: "Time Tails",
+      description: "iOS app using the Pomodoro technique to guide study sessions and track study time, helping users maintain focus and productivity through timed intervals.",
+      technologies: ["Swift", "Xcode", "iOS Development", "Core Data"],
+      image: "photo-1434494878577-86c23bcb06b9",
+      github: "https://github.com/Bitaniyagetu",
+      demo: "#"
     }
   ];
 
