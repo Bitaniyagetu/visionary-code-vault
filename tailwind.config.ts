@@ -66,9 +66,16 @@ export default {
 				cyber: 'hsl(var(--cyber))',
 				neon: 'hsl(var(--neon))'
 			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)'
+			},
+			boxShadow: {
+				'glow-primary': 'var(--glow-primary)',
+				'glow-accent': 'var(--glow-accent)'
+			},
 			fontFamily: {
-				'serif': ['Playfair Display', 'serif'],
-				'sans': ['Inter', 'sans-serif']
+				'mono': ['JetBrains Mono', 'Fira Code', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
