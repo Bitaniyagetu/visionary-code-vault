@@ -5,63 +5,63 @@ import { Code, Database, Globe, Smartphone, Brain, Settings } from "lucide-react
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend Development",
-      icon: Globe,
-      skills: [
-        { name: "React/Next.js", level: 90 },
-        { name: "TypeScript", level: 85 },
-        { name: "Tailwind CSS", level: 88 },
-        { name: "Vue.js", level: 75 }
-      ]
-    },
-    {
-      title: "Backend Development",
-      icon: Database,
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "Java", level: 75 },
-        { name: "Express.js", level: 85 }
-      ]
-    },
-    {
       title: "Programming Languages",
       icon: Code,
       skills: [
-        { name: "JavaScript", level: 90 },
+        { name: "Java", level: 85 },
         { name: "Python", level: 85 },
-        { name: "Java", level: 80 },
-        { name: "C++", level: 70 }
+        { name: "C++", level: 80 },
+        { name: "JavaScript", level: 80 }
       ]
     },
     {
-      title: "Mobile Development",
-      icon: Smartphone,
+      title: "Web Development",
+      icon: Globe,
       skills: [
-        { name: "React Native", level: 75 },
-        { name: "Flutter", level: 65 },
-        { name: "iOS (Swift)", level: 60 },
-        { name: "Android (Kotlin)", level: 65 }
+        { name: "HTML", level: 90 },
+        { name: "CSS", level: 85 },
+        { name: "Node.js", level: 80 },
+        { name: "JavaScript", level: 80 }
       ]
     },
     {
-      title: "AI & Machine Learning",
-      icon: Brain,
+      title: "Database & Data",
+      icon: Database,
       skills: [
-        { name: "TensorFlow", level: 70 },
-        { name: "PyTorch", level: 65 },
-        { name: "Scikit-learn", level: 75 },
-        { name: "OpenAI API", level: 80 }
+        { name: "MySQL", level: 85 },
+        { name: "Database Management", level: 80 },
+        { name: "Data Structures", level: 85 },
+        { name: "Algorithm Design", level: 80 }
       ]
     },
     {
-      title: "DevOps & Tools",
+      title: "Development Tools",
       icon: Settings,
       skills: [
-        { name: "Docker", level: 75 },
-        { name: "Git/GitHub", level: 90 },
-        { name: "AWS", level: 70 },
-        { name: "Linux", level: 80 }
+        { name: "Visual Studio Code", level: 90 },
+        { name: "Git", level: 85 },
+        { name: "PyCharm", level: 80 },
+        { name: "Eclipse", level: 75 }
+      ]
+    },
+    {
+      title: "Operating Systems",
+      icon: Smartphone,
+      skills: [
+        { name: "Windows", level: 90 },
+        { name: "macOS", level: 85 },
+        { name: "Linux", level: 80 },
+        { name: "Terminal", level: 85 }
+      ]
+    },
+    {
+      title: "Specialized Skills",
+      icon: Brain,
+      skills: [
+        { name: "API Integration", level: 85 },
+        { name: "Software Engineering", level: 80 },
+        { name: "System Analysis", level: 75 },
+        { name: "Network Troubleshooting", level: 80 }
       ]
     }
   ];

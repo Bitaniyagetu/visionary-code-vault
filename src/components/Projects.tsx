@@ -6,35 +6,35 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "AI-Powered Task Manager",
-      description: "A smart task management app that uses machine learning to prioritize tasks and predict completion times.",
-      technologies: ["React", "TypeScript", "Python", "TensorFlow", "PostgreSQL"],
-      image: "photo-1461749280684-dccba630e2f6",
-      github: "#",
+      title: "Real-Time Weather App",
+      description: "Java-based application that integrates weather APIs to fetch real-time data for 100,000+ cities, reducing response time by 40% through optimized API calls.",
+      technologies: ["Java", "API Integration", "OOP Design"],
+      image: "photo-1504608524841-42fe6f032b4b",
+      github: "https://github.com/Bitaniyagetu",
       demo: "#"
     },
     {
-      title: "Real-time Chat Application",
-      description: "Full-stack chat application with real-time messaging, file sharing, and video calls.",
-      technologies: ["Node.js", "Socket.io", "React", "MongoDB", "WebRTC"],
-      image: "photo-1487058792275-0ad4aaf24ca7",
-      github: "#",
+      title: "Contact Management System",
+      description: "Relational database system using MySQL and Python to efficiently store, retrieve, and manage 1,000+ user contacts with CRUD operations.",
+      technologies: ["Python", "MySQL", "Database Design", "CRUD Operations"],
+      image: "photo-1460925895917-afdab827c52f",
+      github: "https://github.com/Bitaniyagetu",
       demo: "#"
     },
     {
-      title: "E-commerce Platform",
-      description: "Modern e-commerce platform with payment integration, inventory management, and analytics dashboard.",
-      technologies: ["Next.js", "Stripe", "Prisma", "PostgreSQL", "Tailwind"],
-      image: "photo-1498050108023-c5249f4df085",
-      github: "#",
+      title: "Text-Based Games",
+      description: "Interactive Python games featuring logic-driven gameplay, user input validation, and state management for scalability and ease of modification.",
+      technologies: ["Python", "Game Logic", "State Management"],
+      image: "photo-1493711662062-fa541adb3fc8",
+      github: "https://github.com/Bitaniyagetu",
       demo: "#"
     },
     {
-      title: "Data Visualization Dashboard",
-      description: "Interactive dashboard for visualizing complex datasets with custom charts and real-time updates.",
-      technologies: ["D3.js", "React", "Express", "MySQL", "Chart.js"],
-      image: "photo-1518770660439-4636190af475",
-      github: "#",
+      title: "Feru Bar & Restaurant Website",
+      description: "Complete restaurant website with modern design, interactive features, and responsive layout built with vanilla web technologies.",
+      technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
+      image: "photo-1517248135467-4c7edcad34c4",
+      github: "https://github.com/Bitaniyagetu",
       demo: "#"
     }
   ];

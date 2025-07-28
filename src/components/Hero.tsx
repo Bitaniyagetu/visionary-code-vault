@@ -33,16 +33,15 @@ const Hero = () => {
           </Badge>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="text-foreground">Hello, I'm </span>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Building the Future
+              Bitaniya Getu
             </span>
-            <br />
-            <span className="text-foreground">One Line at a Time</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Passionate about creating innovative solutions through code. 
-            Specializing in full-stack development, AI, and modern web technologies.
+            Computer Science Student at Howard University passionate about software development 
+            and creating innovative solutions that make a real impact.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -56,13 +55,28 @@ const Hero = () => {
             </Button>
             
             <div className="flex gap-4">
-              <Button variant="outline" size="lg" className="p-3 border-primary/30 hover:border-primary hover:shadow-glow-primary transition-all duration-300">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="p-3 border-primary/30 hover:border-primary hover:shadow-glow-primary transition-all duration-300"
+                onClick={() => window.open('https://github.com/Bitaniyagetu', '_blank')}
+              >
                 <Github className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="p-3 border-primary/30 hover:border-primary hover:shadow-glow-primary transition-all duration-300">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="p-3 border-primary/30 hover:border-primary hover:shadow-glow-primary transition-all duration-300"
+                onClick={() => window.open('http://www.linkedin.com/in/bitaniyagetu', '_blank')}
+              >
                 <Linkedin className="h-5 w-5" />
               </Button>
-              <Button variant="outline" size="lg" className="p-3 border-primary/30 hover:border-primary hover:shadow-glow-primary transition-all duration-300">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="p-3 border-primary/30 hover:border-primary hover:shadow-glow-primary transition-all duration-300"
+                onClick={() => window.open('mailto:bitaniya.getu@bison.howard.edu', '_blank')}
+              >
                 <Mail className="h-5 w-5" />
               </Button>
             </div>
@@ -70,7 +84,7 @@ const Hero = () => {
           
           {/* Tech stack showcase */}
           <div className="flex flex-wrap gap-3 justify-center">
-            {['JavaScript', 'TypeScript', 'React', 'Node.js', 'Python', 'Java', 'SQL'].map((tech, index) => (
+            {['Java', 'Python', 'C++', 'JavaScript', 'HTML', 'CSS', 'MySQL'].map((tech, index) => (
               <Badge 
                 key={tech} 
                 variant="secondary" 

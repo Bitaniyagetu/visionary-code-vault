@@ -6,27 +6,27 @@ const About = () => {
   const achievements = [
     {
       icon: GraduationCap,
-      title: "Computer Science Student",
-      description: "Pursuing Bachelor's in Computer Science with focus on AI and Software Engineering",
-      highlight: "Dean's List"
+      title: "Howard University Student",
+      description: "Pursuing Bachelor's in Computer Science with Software Development concentration",
+      highlight: "3.86 GPA"
     },
     {
       icon: Code2,
-      title: "Full-Stack Developer",
-      description: "2+ years of experience building web applications with modern technologies",
-      highlight: "10+ Projects"
+      title: "Student Technician",
+      description: "Technical support for Windows and macOS systems with 90%+ first-call resolution",
+      highlight: "95% Satisfaction"
     },
     {
       icon: Award,
-      title: "Hackathon Winner",
-      description: "Won multiple hackathons including TechCrunch Disrupt and Local Code Challenge",
-      highlight: "3x Winner"
+      title: "Scholarship Recipient",
+      description: "Howard Scholarship Award and Presidential Dean's List Award recipient",
+      highlight: "Multiple Awards"
     },
     {
       icon: Users,
-      title: "Team Leader",
-      description: "Led development teams in various group projects and open-source contributions",
-      highlight: "5+ Teams"
+      title: "Leadership Roles",
+      description: "Vice President of NSBE and ASA, active in multiple tech organizations",
+      highlight: "VP of 2 Orgs"
     }
   ];
 
@@ -40,9 +40,9 @@ const About = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate Computer Science student with a love for creating innovative solutions 
-            that make a real impact. My journey in tech started with curiosity about how things work, 
-            and has evolved into a deep commitment to building the future through code.
+            I'm a dedicated Computer Science student at Howard University with a passion for software development 
+            and creating impactful solutions. Currently maintaining a 3.86 GPA and actively involved in tech 
+            communities while gaining hands-on experience through various projects and leadership roles.
           </p>
         </div>
 
@@ -52,18 +52,18 @@ const About = () => {
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-foreground">My Journey</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Started programming at age 16 with Python, quickly fell in love with the endless 
-                possibilities of code. Currently pursuing my degree while working on real-world 
-                projects that challenge me to grow and learn new technologies.
+                Currently pursuing my Bachelor's in Computer Science at Howard University with a 
+                concentration in Software Development. Previously studied at Marist University and 
+                gained practical experience as a Student Technician providing technical support.
               </p>
             </div>
 
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-foreground">What Drives Me</h3>
               <p className="text-muted-foreground leading-relaxed">
-                I believe technology should be accessible, efficient, and impactful. Whether it's 
-                building user-friendly interfaces, optimizing backend systems, or exploring AI 
-                applications, I'm always looking for ways to create meaningful solutions.
+                I'm passionate about software engineering, database management, and creating efficient 
+                solutions. Through coursework in algorithms, data structures, and system analysis, 
+                combined with hands-on projects, I strive to build scalable and maintainable applications.
               </p>
             </div>
 
