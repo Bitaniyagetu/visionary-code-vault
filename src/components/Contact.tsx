@@ -13,10 +13,10 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
-    
+
     try {
       const res = await fetch("http://localhost:3001/api/contact", {
         method: "POST",
@@ -30,26 +30,26 @@ const Contact = () => {
           message: formData.get("message")
         })
       });
-    
-      if (!res.ok) throw new Error("Failed to send");
-    
+
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error || "Failed to send");
+
       toast({
         title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        description: "Thank you for reaching out. I'll get back to you soon."
       });
-    
+
       form.reset();
     } catch (err) {
+      console.error("Form error:", err);
       toast({
         title: "Something went wrong",
-        description: "Please try again later.",
-        variant: "destructive",
+        description: (err as Error).message || "Please try again later.",
+        variant: "destructive"
       });
     }
-    
-    
+
     setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
   };
 
   const contactInfo = [
@@ -97,50 +97,22 @@ const Contact = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Name</label>
-                    <Input 
-                      name="name"
-                      required 
-                      placeholder="Your name"
-                      className="bg-background/50 border-border/50 focus:border-primary"
-                    />
+                    <Input name="name" required placeholder="Your name" className="bg-background/50 border-border/50 focus:border-primary" />
                   </div>
                   <div className="space-y-2">
                     <label className="text-sm font-medium">Email</label>
-                    <Input 
-                      name="email"
-                      type="email" 
-                      required 
-                      placeholder="your.email@example.com"
-                      className="bg-background/50 border-border/50 focus:border-primary"
-                    />
+                    <Input name="email" type="email" required placeholder="your.email@example.com" className="bg-background/50 border-border/50 focus:border-primary" />
                   </div>
                 </div>
-                
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Subject</label>
-                  <Input 
-                    name="subject"
-                    required 
-                    placeholder="What's this about?"
-                    className="bg-background/50 border-border/50 focus:border-primary"
-                  />
+                  <Input name="subject" required placeholder="What's this about?" className="bg-background/50 border-border/50 focus:border-primary" />
                 </div>
-                
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Message</label>
-                  <Textarea 
-                    name="message"
-                    required 
-                    placeholder="Tell me about your project or just say hello!"
-                    className="min-h-32 bg-background/50 border-border/50 focus:border-primary resize-none"
-                  />
+                  <Textarea name="message" required placeholder="Tell me about your project or just say hello!" className="min-h-32 bg-background/50 border-border/50 focus:border-primary resize-none" />
                 </div>
-                
-                <Button 
-                  type="submit" 
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-primary hover:shadow-glow-primary transition-all duration-300"
-                >
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-gradient-primary hover:shadow-glow-primary transition-all duration-300">
                   {isSubmitting ? (
                     <>Sending...</>
                   ) : (
@@ -163,44 +135,26 @@ const Contact = () => {
                 I'd love to hear from you. Feel free to reach out through any of the channels below.
               </p>
             </div>
-
-            {/* Contact Information */}
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
-                <div 
-                  key={info.label}
-                  className="flex items-center space-x-4 p-4 rounded-lg bg-card/30 backdrop-blur-sm border border-border/30 hover:border-primary/30 transition-all duration-300 animate-slide-in"
-                  style={{ animationDelay: `${0.3 + index * 0.1}s` }}
-                >
+                <div key={info.label} className="flex items-center space-x-4 p-4 rounded-lg bg-card/30 backdrop-blur-sm border border-border/30 hover:border-primary/30 transition-all duration-300 animate-slide-in" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
                   <div className="w-10 h-10 p-2 bg-gradient-primary rounded-lg">
                     <info.icon className="w-full h-full text-primary-foreground" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">{info.label}</p>
-                    <a 
-                      href={info.href}
-                      className="font-medium hover:text-primary transition-colors duration-300"
-                    >
+                    <a href={info.href} className="font-medium hover:text-primary transition-colors duration-300">
                       {info.value}
                     </a>
                   </div>
                 </div>
               ))}
             </div>
-
-            {/* Social Links */}
             <div>
               <h4 className="text-lg font-semibold mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
-                  <Button
-                    key={social.label}
-                    variant="outline"
-                    size="lg"
-                    className="p-3 border-primary/30 hover:border-primary hover:shadow-glow-primary transition-all duration-300 animate-slide-in"
-                    style={{ animationDelay: `${0.6 + index * 0.1}s` }}
-                    asChild
-                  >
+                  <Button key={social.label} variant="outline" size="lg" className="p-3 border-primary/30 hover:border-primary hover:shadow-glow-primary transition-all duration-300 animate-slide-in" style={{ animationDelay: `${0.6 + index * 0.1}s` }} asChild>
                     <a href={social.href} aria-label={social.label}>
                       <social.icon className="h-5 w-5" />
                     </a>
